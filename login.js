@@ -1,12 +1,16 @@
 // Your web app's Firebase configuration
-var firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyD_b4RXjDIaUYoKk-u_78l7Gkj2a-ESTSI",
+  authDomain: "ng-database-a756e.firebaseapp.com",
+  databaseURL: "https://ng-database-a756e-default-rtdb.firebaseio.com",
+  projectId: "ng-database-a756e",
+  storageBucket: "ng-database-a756e.appspot.com",
+  messagingSenderId: "553829763526",
+  appId: "1:553829763526:web:da368218d4a37f327b0ac7",
+  measurementId: "G-SWRSQ5DMQG"
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 // Initialize variables
@@ -18,9 +22,6 @@ function register () {
   // Get all our input fields
   email = document.getElementById('email').value
   password = document.getElementById('password').value
-  full_name = document.getElementById('full_name').value
-  favourite_song = document.getElementById('favourite_song').value
-  milk_before_cereal = document.getElementById('milk_before_cereal').value
 
   // Validate input fields
   if (validate_email(email) == false || validate_password(password) == false) {
@@ -89,7 +90,8 @@ function login () {
 
     // DOne
     alert('User Logged In!!')
-
+    // similar behavior as clicking on a link
+    window.location.href = "main.html";
   })
   .catch(function(error) {
     // Firebase will use this to alert of its errors
