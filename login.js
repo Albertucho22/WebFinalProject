@@ -24,7 +24,7 @@ function register () {
 
   // Validate input fields
   if (validate_email(email) == false || validate_password(password) == false) {
-    alert('Email or Password is Outta Line!!')
+    alert('Email or Password is wrong.')
     return;
   }
  
@@ -40,9 +40,6 @@ function register () {
     // Create User data
     var user_data = {
       email : email,
-      full_name : full_name,
-      favourite_song : favourite_song,
-      milk_before_cereal : milk_before_cereal,
       last_login : Date.now()
     }
 
